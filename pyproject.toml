@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+pythonpath = ["backend", "frontend"]
+testpaths = ["backend/tests", "frontend/tests"]
+addopts = "-q"

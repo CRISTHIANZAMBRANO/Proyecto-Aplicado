@@ -1,0 +1,191 @@
+{
+  "model_name": "Random Forest - clase de siniestro",
+  "model_version": "1.0.0",
+  "created_at_utc": "2026-09-17T05:00:55.126384+00:00",
+  "experimental": true,
+  "warning": "Modelo experimental de apoyo analítico. No sustituye el criterio de una autoridad ni demuestra relaciones causales.",
+  "target": "clase_siniestro_modelo",
+  "features": [
+    "edad",
+    "hora",
+    "sexo",
+    "zona_hecho",
+    "vehiculo",
+    "condicion_victima",
+    "dia_semana",
+    "municipio_hecho",
+    "mes_hecho",
+    "tipo_servicio_vehiculo",
+    "escenario_hecho",
+    "condicion_lugar",
+    "estado_via"
+  ],
+  "numeric_features": [
+    "edad",
+    "hora",
+    "mes_hecho"
+  ],
+  "categorical_features": [
+    "sexo",
+    "zona_hecho",
+    "vehiculo",
+    "condicion_victima",
+    "dia_semana",
+    "municipio_hecho",
+    "tipo_servicio_vehiculo",
+    "escenario_hecho",
+    "condicion_lugar",
+    "estado_via"
+  ],
+  "categories": {
+    "sexo": [
+      "FEMENINO",
+      "MASCULINO"
+    ],
+    "zona_hecho": [
+      "CENTRO POBLADO -INSPECCION CORREGIMIENTO O CASERIO",
+      "RURAL",
+      "SIN INFORMACION",
+      "URBANA"
+    ],
+    "vehiculo": [
+      "AUTOMOVIL",
+      "BICICLETA",
+      "BUS",
+      "CAMION",
+      "CAMION FURGON",
+      "CAMIONETA",
+      "CAMPERO",
+      "CUATRIMOTO",
+      "MAQUINARIA INDUSTRIAL",
+      "MICROBUS",
+      "MOTO CARRO",
+      "MOTO TAXI",
+      "MOTOCARRO",
+      "MOTOCICLETA",
+      "NO APLICA",
+      "TAXI",
+      "TRACTOCAMION",
+      "VEHICULO ARTICULADO",
+      "VOLQUETA"
+    ],
+    "condicion_victima": [
+      "CONDUCTOR",
+      "PASAJERO",
+      "PEATON"
+    ],
+    "dia_semana": [
+      "DOMINGO",
+      "JUEVES",
+      "LUNES",
+      "MARTES",
+      "MIERCOLES",
+      "SABADO",
+      "SIN INFORMACION",
+      "VIERNES"
+    ],
+    "municipio_hecho": [
+      "APIA",
+      "BALBOA",
+      "BELEN DE UMBRIA",
+      "DOSQUEBRADAS",
+      "GUATICA",
+      "LA CELIA",
+      "LA VIRGINIA",
+      "MARSELLA",
+      "MISTRATO",
+      "PEREIRA",
+      "PUEBLO RICO",
+      "QUINCHIA",
+      "SANTA ROSA DE CABAL",
+      "SANTUARIO"
+    ],
+    "tipo_servicio_vehiculo": [
+      "NO APLICA",
+      "OFICIAL",
+      "PARTICULAR",
+      "SERVICIO PUBLICO",
+      "SIN INFORMACION"
+    ],
+    "escenario_hecho": [
+      "AREAS DE DEPORTE",
+      "BOMBAS GASOLINA",
+      "BOSQUE, BALDIO, POTRERO",
+      "CALLE (AUTOPISTA, AVENIDA, DENTRO DE LA CIUDAD)",
+      "CALLE (AUTOPISTA,AVENIDA,DENTRO DE LA CIUDAD)",
+      "CALLES",
+      "CARRETERA",
+      "CARRETERA (FUERA DE LA CIUDAD)",
+      "ESPACIOS TERRESTRES AL AIRE LIBRE (BOSQUE,POTRERO,MONTANA,PLAYA,ETC)",
+      "FINCA",
+      "GRANJA",
+      "LUGAR PUBLICO SIN OTRA INDICACION",
+      "PARQUEADERO, ESTACIONAMIENTO",
+      "RIO, ARROYO, HUMEDAL, RONDA, LAGO, EMBALSE",
+      "SIN INFORMACION",
+      "TERMINALES DE PASAJEROS",
+      "VEHICULO SERVICIO PUBLICO",
+      "VIA PUBLICA",
+      "VIVIENDA",
+      "ZONAS DE ACTIVIDADES AGROPECUARIAS"
+    ],
+    "condicion_lugar": [
+      "LLUVIA",
+      "NIEBLA",
+      "NORMAL",
+      "OTROS",
+      "SECO",
+      "SIN INFORMACION",
+      "VIENTO"
+    ],
+    "estado_via": [
+      "BUENO",
+      "CON HUECOS",
+      "FISURADA",
+      "HUNDIMIENTO",
+      "MALO",
+      "REGULAR",
+      "RIZADA",
+      "ROCAS EN LA VIA",
+      "SIN INFORMACION"
+    ]
+  },
+  "classes": [
+    "ATROPELLO",
+    "CHOQUE CON OBJETO FIJO",
+    "CHOQUE CON OTRO VEHICULO",
+    "OTROS"
+  ],
+  "class_priors": {
+    "ATROPELLO": 0.4035752979414951,
+    "CHOQUE CON OBJETO FIJO": 0.11213434452871072,
+    "CHOQUE CON OTRO VEHICULO": 0.3884073672806067,
+    "OTROS": 0.09588299024918744
+  },
+  "training_rows": 1846,
+  "training_groups": 1803,
+  "verified_metrics": {
+    "f1_macro_oof": 0.6309969191402276,
+    "balanced_accuracy_oof": 0.6518815118308638,
+    "accuracy_oof": 0.742145178764897,
+    "target_f1_macro": 0.7,
+    "target_met": false,
+    "evaluation": "4-fold StratifiedGroupKFold out-of-fold"
+  },
+  "model_parameters": {
+    "n_estimators": 500,
+    "max_depth": 24,
+    "min_samples_leaf": 8,
+    "min_samples_split": 2,
+    "max_features": "sqrt",
+    "class_weight": null,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "library_versions": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}

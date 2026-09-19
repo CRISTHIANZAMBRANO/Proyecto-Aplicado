@@ -1,0 +1,6 @@
+-r requirements-api.txt
+-r requirements-frontend.txt
+pytest>=8.3,<9
+httpx>=0.28,<1
+xgboost>=3.0,<4
+
